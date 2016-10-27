@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E7C211091DC12A69007FE602 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C211081DC12A69007FE602 /* main.m */; };
+		E7C211141DC12E3F007FE602 /* dynamicProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C211131DC12E3F007FE602 /* dynamicProgramming.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E7C211051DC12A69007FE602 /* algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C211081DC12A69007FE602 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7C211121DC12E3F007FE602 /* dynamicProgramming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamicProgramming.h; sourceTree = "<group>"; };
+		E7C211131DC12E3F007FE602 /* dynamicProgramming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dynamicProgramming.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				E7C211081DC12A69007FE602 /* main.m */,
+				E7C211121DC12E3F007FE602 /* dynamicProgramming.h */,
+				E7C211131DC12E3F007FE602 /* dynamicProgramming.m */,
 			);
 			path = algorithms;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C211091DC12A69007FE602 /* main.m in Sources */,
+				E7C211141DC12E3F007FE602 /* dynamicProgramming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +224,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 2Y8268QCY6;
+				FRAMEWORK_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -226,6 +234,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 2Y8268QCY6;
+				FRAMEWORK_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -249,6 +259,7 @@
 				E7C2110E1DC12A69007FE602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
