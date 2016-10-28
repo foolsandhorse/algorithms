@@ -17,10 +17,10 @@ int fibarray[max] = {0};
 @property(nonatomic,copy)NSMutableArray  *fib;
 @end
 
-
 @implementation dynamicProgramming
 @synthesize fib;
 
+#pragma Fibonacci
 -(int)FibonacciRe:(int)n
 {
     if(n == 0)
@@ -28,13 +28,13 @@ int fibarray[max] = {0};
     if(n == 1)
 	  return 1;
     else
-    {
-	  int f = [self FibonacciRe:n-1] + [self FibonacciRe:n-2];
-	  return f;
-    }
-    
+	  return [self FibonacciRe:n-1] + [self FibonacciRe:n-2];
 }
 
+
+/*
+ 
+ */
 -(int)FibonacciDynamicTopDown:(int)n
 {
     if(n == 0)
@@ -46,10 +46,10 @@ int fibarray[max] = {0};
     if ([[fib objectAtIndex:n] intValue] != 0)
 	  return [[fib objectAtIndex:n]intValue];
     else
-    {
+	  {
 	  [fib insertObject:[NSNumber numberWithInt:[self FibonacciDynamicTopDown:n-1] + [self FibonacciDynamicTopDown:n-2]] atIndex:n];
 	  return [[fib objectAtIndex:n]intValue];
-    }
+	  }
 }
 
 -(int)fibarrayBottomUp:(int)n
@@ -65,110 +65,4 @@ int fibarray[max] = {0};
     
 }
 
--(void)printSubset:(NSMutableArray*)A withSubset:(int)K withStart:(int)start withCurentlength:(int)curr arrayused:(NSMutableArray*)sed
-{
-    if(curr == K )
-	  {
-	  for(int i = 0 ; i < A.count ; i++)
-		{
-		    if([[sed objectAtIndex:i] boolValue] == true)
-		    {
-			  NSLog(@"%@", [A objectAtIndex:i]);
-		    }
-		}
-		return;
-	  }
-    if(start == A.count)
-	  return;
-    
-    [sed replaceObjectAtIndex:start withObject:[NSNumber numberWithBool:true]];
-    [self printSubset:A withSubset:K withStart:start+1 withCurentlength:curr+1 arrayused:sed];
-    
-    
-    [sed replaceObjectAtIndex:start withObject:[NSNumber numberWithBool:false]];
-    [self printSubset:A withSubset:K withStart:start+1 withCurentlength:curr arrayused:sed];
-    
-}
-
--(void)replacSpacewith:(NSMutableString *)s1 withLength:(int)length
-{
-    if(s1 == nil)
-	  return;
-    int spacecount = 0;
-    for(int i = 0 ; i < s1.length ; i++)
-	  {
-		if([s1 characterAtIndex:i] == ' ')
-		{
-		    spacecount++;
-		}
-	  }
-    int newLength = (int)s1.length + 2*spacecount;
-    NSMutableString *newstring = [NSMutableString stringWithCapacity:newLength];
-    for(int i = (int)s1.length-1 ; i >=0 ; i--)
-    {
-	  if([s1 characterAtIndex:i] == ' ')
-	  {
-	  [newstring replaceCharactersInRange:NSMakeRange(newLength-1, 1) withString:@"0"];
-	  [newstring replaceCharactersInRange:NSMakeRange(newLength-2, 1) withString:@"2"];
-	  [newstring replaceCharactersInRange:NSMakeRange(newLength-3, 1) withString:@"%"];
-	  newLength = newLength-3;
-	  }
-	  else
-	  {
-	  [newstring replaceCharactersInRange:NSMakeRange(newLength-1,1) withString:[NSString stringWithFormat:@"%C",[s1 characterAtIndex:i]]];
-	  newLength = newLength-1;
-	  }
-    }
-}
-
-
-
-
-
-
-
-
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

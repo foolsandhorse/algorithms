@@ -14,8 +14,5 @@ extern int const max;
 -(int)FibonacciRe:(int)n;
 -(int)FibonacciDynamicTopDown:(int)n;
 -(int)fibarrayBottomUp:(int)n;
--(void)printSubset:(NSMutableArray*)A withSubset:(int)K withStart:(int)Start withCurentlength:(int)curr arrayused:(NSMutableArray*)sed;
--(void)replacSpacewith:(NSMutableString*)s1 withLength:(int)length;
-
 
 @end
