@@ -12,5 +12,7 @@
 
 -(void)printSubset:(NSMutableArray*)A withSubset:(int)K withStart:(int)Start withCurentlength:(int)curr arrayused:(NSMutableArray*)sed;
 -(void)replacSpacewith:(NSMutableString*)s1 withLength:(int)length;
+-(NSMutableString*)removeDupUsingHash:(NSMutableString*)str;
+-(NSMutableString*)removeDupsUsingHashSameString:(NSMutableString*)strin;
 
 @end
