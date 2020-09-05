@@ -10,8 +10,7 @@
 
 @implementation Regular
 
--(NSMutableString*)removeDupUsingHash:(NSMutableString *)str
-{
+-(NSMutableString*)removeDupUsingHash:(NSMutableString *)str {
     NSMutableArray *hash = [[NSMutableArray alloc] initWithCapacity:256];
     NSMutableString *outp = [[NSMutableString alloc]init];
     Boolean dup;
@@ -35,8 +34,7 @@
     return outp;
 }
 
--(NSMutableString*)removeDupsUsingHashSameString:(NSMutableString *)strin
-{
+-(NSMutableString*)removeDupsUsingHashSameString:(NSMutableString *)strin {
     NSMutableArray *hash = [[NSMutableArray alloc] initWithCapacity:256];
     int innercount = 0;
     for(int i = 0 ; i < 256 ; i++)
@@ -57,8 +55,7 @@
     return strin;
 }
 
--(void)printSubset:(NSMutableArray*)A withSubset:(int)K withStart:(int)start withCurentlength:(int)curr arrayused:(NSMutableArray*)sed
-{
+-(void)printSubset:(NSMutableArray*)A withSubset:(int)K withStart:(int)start withCurentlength:(int)curr arrayused:(NSMutableArray*)sed {
     if(curr == K )
     {
 	  for(int i = 0 ; i < A.count ; i++)
@@ -82,8 +79,7 @@
     
 }
 
--(void)replacSpacewith:(NSMutableString *)s1 withLength:(int)length
-{
+-(void)replacSpacewith:(NSMutableString *)s1 withLength:(int)length {
     if(s1 == nil)
 	  return;
     int spacecount = 0;
@@ -116,4 +112,5 @@
 	  }
     }
 }
+
 @end
