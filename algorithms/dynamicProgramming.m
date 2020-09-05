@@ -21,8 +21,7 @@ int fibarray[max] = {0};
 @synthesize fib;
 
 #pragma Fibonacci
--(int)FibonacciRe:(int)n
-{
+-(int)FibonacciRe:(int)n {
     if(n == 0)
 	  return 0;
     if(n == 1)
@@ -34,8 +33,7 @@ int fibarray[max] = {0};
 /*
  
  */
--(int)FibonacciDynamicTopDown:(int)n
-{
+-(int)FibonacciDynamicTopDown:(int)n {
     if(n == 0)
 	  return 0;
     if(n == 1)
@@ -51,8 +49,7 @@ int fibarray[max] = {0};
 	  }
 }
 
--(int)fibarrayBottomUp:(int)n
-{
+-(int)fibarrayBottomUp:(int)n {
     int fibarry[n+1];
     fibarry[0] = 0;
     fibarry[1] = 1;
